@@ -38,12 +38,13 @@ body {
   width: 90vw;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
 .card {
   background: var(--brightOrange);
-  padding: 3rem 3rem;
+  padding: 3rem 2.5rem;
 }
 
 .card h1 {
@@ -125,6 +126,10 @@ body {
 
   .container {
     flex-direction: row;
+  }
+
+  .card {
+    width: 260px;
   }
 
   .card:nth-child(1) {
