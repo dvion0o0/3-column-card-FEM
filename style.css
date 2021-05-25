@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  margin: 5rem 0;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--brightOrange);
+  padding: 3rem 3rem;
+}
+
+.card h1 {
+  color: var(--gray);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  font-size: 45px;
+}
+
+.card p {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  outline: transparent;
+  border: transparent;
+  font-size: 15px;
+  color: var(--brightOrange);
+  background: white;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--gray);
+  border: 2px solid var(--gray);
+}
+
+.card:nth-child(1) {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card:nth-child(2) {
+  background: var(--cyan);
+}
+
+.card:nth-child(3) {
+  background: var(--darkCyan);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card:nth-child(2) .btn {
+  color: var(--cyan);
+}
+
+.card:nth-child(2) .btn:hover {
+  background: transparent;
+  color: var(--gray);
+  border: 2px solid var(--gray);
+}
+
+.card:nth-child(3) .btn {
+  color: var(--darkCyan);
+}
+
+.card:nth-child(3) .btn:hover {
+  background: transparent;
+  color: var(--gray);
+  border: 2px solid var(--gray);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    margin: 0;
+    min-height: 90vh;
+  }
+
+  .container {
+    width: 80vw;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .card:nth-child(1) {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+  }
+
+  .card:nth-child(3) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 15px;
+  }
+}
